@@ -23,10 +23,20 @@
         "release:patch": "npm run release -- --release-as patch",
         "release:minor": "npm run release -- --release-as minor",
         "release:major": "npm run release -- --release-as major",
-        "publish": "npm run build:all && npm run publish:all"
+        "publish": "npm run build:all && npm run publish:all",
+        "build:all": "npm run build:ng-multilang",
+        "publish:all": "npm run publish:ng-multilang",
+        "build:ng-multilang": "ng run ng-multilang:build",
+        "test:ng-multilang": "ng run ng-multilang:test",
+        "test:ng-multilang:watch": "ng run ng-multilang:test --watch=true",
+        "publish:ng-multilang": "npm publish ./dist/ng-multilang"
     },
     "description": "This is a set of tools to simplify and empover your Angular development",
-    "keywords": ["angular", "ng", "tools"],
+    "keywords": [
+        "angular",
+        "ng",
+        "tools"
+    ],
     "license": "Apache-2.0",
     "author": {
         "name": "Viktor Tolstik",
@@ -46,9 +56,10 @@
         "@angular/platform-browser-dynamic": "^9.1.13",
         "@angular/platform-server": "^9.1.13",
         "@angular/router": "^9.1.13",
-        "@nguniversal/express-engine": "^9.1.1",
         "@ng-web-apis/common": "^1.9.0",
         "@ng-web-apis/universal": "^1.9.2",
+        "@nguniversal/express-engine": "^9.1.1",
+        "@ngx-translate/core": "^13.0.0",
         "core-js": "^2.6.9",
         "express": "^4.15.2",
         "rxjs": "~6.6.3",
@@ -98,7 +109,10 @@
         }
     },
     "lint-staged": {
-        "*.{js,ts,html,md,less,json}": ["prettier --write", "git add"],
+        "*.{js,ts,html,md,less,json}": [
+            "prettier --write",
+            "git add"
+        ],
         "*.ts": "tslint --fix"
     },
     "standard-version": {

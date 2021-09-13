@@ -1,9 +1,10 @@
-import {LocationStrategy, PathLocationStrategy} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {AppComponent} from './app.component';
-import {AppRoutingModule} from './app.routes';
-import {StaticModule} from './modules/static/static.module';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app.routes';
+import { MultilangModule } from './modules/multilang/multilang.module';
+import { StaticModule } from './modules/static/static.module';
 
 @NgModule({
     bootstrap: [AppComponent],
@@ -13,6 +14,7 @@ import {StaticModule} from './modules/static/static.module';
         }),
         AppRoutingModule,
         StaticModule,
+        MultilangModule,
     ],
     declarations: [AppComponent],
     providers: [
@@ -22,4 +24,4 @@ import {StaticModule} from './modules/static/static.module';
         },
     ],
 })
-export class AppBrowserModule {}
+export class AppBrowserModule { }
