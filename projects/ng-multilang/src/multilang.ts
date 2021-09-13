@@ -1,4 +1,8 @@
-type ArrayItem<T> = T extends (infer R)[] ? R : T extends readonly (infer R)[] ? R : never;
+type ArrayItem<T> = T extends (infer R)[]
+    ? R
+    : T extends readonly (infer R)[]
+    ? R
+    : never;
 
 export type ExtractLangs<T> = ArrayItem<T>;
 

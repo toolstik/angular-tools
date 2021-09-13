@@ -1,4 +1,7 @@
-import { ExtractLangs, MultiLangString as LibMultiLangString } from '@toolstik/ng-multilang';
+import type {
+    ExtractLangs,
+    MultiLangString as LibMultiLangString,
+} from '@toolstik/ng-multilang';
 
 export const SupportedLangsArray = ['en', 'ru'] as const;
 

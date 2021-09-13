@@ -72,12 +72,15 @@
         "@angular-devkit/core": "^9.1.13",
         "@angular-devkit/schematics": "^9.1.13",
         "@angular-devkit/schematics-cli": "~0.901.13",
+        "@angular-eslint/builder": "^12.4.1",
         "@angular/cli": "^9.1.13",
         "@angular/compiler-cli": "^9.1.13",
         "@angular/language-service": "^9.1.13",
         "@commitlint/cli": "^11.0.0",
         "@commitlint/config-conventional": "^11.0.0",
         "@nguniversal/builders": "^9.1.1",
+        "@tinkoff/eslint-config": "^1.2.4",
+        "@tinkoff/eslint-config-angular": "^1.2.4",
         "@tinkoff/linters": "^0.6.0",
         "@types/express": "^4.17.0",
         "@types/jasmine": "^3.6.2",
@@ -109,11 +112,7 @@
         }
     },
     "lint-staged": {
-        "*.{js,ts,html,md,less,json}": [
-            "prettier --write",
-            "git add"
-        ],
-        "*.ts": "tslint --fix"
+        "*.ts": "eslint"
     },
     "standard-version": {
         "scripts": {

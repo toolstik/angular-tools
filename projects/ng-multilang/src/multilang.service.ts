@@ -1,18 +1,15 @@
-import { Inject, Injectable } from '@angular/core';
-import { CurrentLangFunc, DefaultSupportedLangs, MultiLangString } from './multilang';
-import { MULTILANG_CURRENT_LANG_TOKEN, MULTILANG_SUPPORTED_LANGS_TOKEN } from './tokens';
+import {Inject, Injectable} from '@angular/core';
+import type {CurrentLangFunc, DefaultSupportedLangs, MultiLangString} from './multilang';
+import {MULTILANG_CURRENT_LANG_TOKEN, MULTILANG_SUPPORTED_LANGS_TOKEN} from './tokens';
 
 @Injectable()
 export class MultilangService<T extends string = DefaultSupportedLangs> {
-
     constructor(
         @Inject(MULTILANG_CURRENT_LANG_TOKEN) private currentLang: CurrentLangFunc<T>,
-        @Inject(MULTILANG_SUPPORTED_LANGS_TOKEN) private supportedLangs: T[]
-    ) {
-    }
+        @Inject(MULTILANG_SUPPORTED_LANGS_TOKEN) private supportedLangs: T[],
+    ) {}
 
     translate(value: MultiLangString<T> | string, defaultLang?: T): string {
-
         if (value == null) {
             return '';
         }
@@ -22,7 +19,7 @@ export class MultilangService<T extends string = DefaultSupportedLangs> {
         }
 
         if (!defaultLang) {
-            defaultLang = this.supportedLangs[0];
+            [defaultLang] = this.supportedLangs;
         }
 
         const currentLang = this.currentLang();
@@ -45,7 +42,6 @@ export class MultilangService<T extends string = DefaultSupportedLangs> {
     }
 
     isMultiLangString(input: any): input is MultiLangString<T> {
-
         if (typeof input !== 'object') {
             return false;
         }
@@ -64,10 +60,9 @@ export class MultilangService<T extends string = DefaultSupportedLangs> {
         }
 
         return true;
-
     }
 
-    isStringOrMultilang(input: any): input is (string | MultiLangString<T>) {
+    isStringOrMultilang(input: any): input is string | MultiLangString<T> {
         return typeof input === 'string' || this.isMultiLangString(input);
     }
 
