@@ -1,5 +1,5 @@
 {
-    "name": "@tinkoff/angular-open-source-starter",
+    "name": "@toolstik/angular-tools",
     "version": "1.0.0",
     "scripts": {
         "ng": "ng",
@@ -25,18 +25,16 @@
         "release:major": "npm run release -- --release-as major",
         "publish": "npm run build:all && npm run publish:all"
     },
-    "description": "This is a template project to develop, create and open-source Angular libraries with demos",
-    "keywords": ["angular", "ng", "workspace", "library", "starter", "tinkoff"],
+    "description": "This is a set of tools to simplify and empover your Angular development",
+    "keywords": ["angular", "ng", "tools"],
     "license": "Apache-2.0",
     "author": {
-        "name": "Roman Sedov",
-        "email": "79601794011@ya.ru",
-        "url": "http://marsibarsi.me/"
+        "name": "Viktor Tolstik",
+        "email": "tolstik.va@gmail.com"
     },
-    "contributors": ["Alex Inkin <alexander@inkin.ru>"],
-    "repository": "https://github.com/TinkoffCreditSystems/angular-library-starter",
-    "bugs": "https://github.com/TinkoffCreditSystems/angular-library-starter/issues",
-    "homepage": "https://github.com/TinkoffCreditSystems/angular-library-starter#README",
+    "repository": "https://github.com/toolstik/angular-tools",
+    "bugs": "https://github.com/toolstik/angular-tools/issues",
+    "homepage": "https://github.com/toolstik/angular-tools#README",
     "schematics": "./schematics/collection.json",
     "dependencies": {
         "@angular/animations": "^9.1.13",
