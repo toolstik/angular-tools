@@ -1,4 +1,4 @@
-# Polymorpheus
+# ng-multilang
 
 [![npm version](https://img.shields.io/npm/v/@toolstik/ng-multilang.svg)](https://npmjs.com/package/@toolstik/ng-multilang)
 [![Coverage Status](https://coveralls.io/repos/github/toolstik/angular-tools/badge.svg?branch=master)](https://coveralls.io/github/toolstik/angular-tools?branch=master)
