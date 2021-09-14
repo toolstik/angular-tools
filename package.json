@@ -1,6 +1,6 @@
 {
     "name": "@toolstik/angular-tools",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
@@ -29,7 +29,7 @@
         "build:ng-multilang": "ng run ng-multilang:build",
         "test:ng-multilang": "ng run ng-multilang:test",
         "test:ng-multilang:watch": "ng run ng-multilang:test --watch=true",
-        "publish:ng-multilang": "npm publish ./dist/ng-multilang"
+        "publish:ng-multilang": "npm publish ./dist/ng-multilang --access public"
     },
     "description": "This is a set of tools to simplify and empover your Angular development",
     "keywords": [
@@ -101,6 +101,7 @@
         "standard-version": "^9.0.0",
         "stylelint": "^10.0.1",
         "ts-node": "^9.1.1",
+        "tsickle": "^0.38.1",
         "tslint": "~5.15.0",
         "tsutils": "^3.17.1",
         "typescript": "~3.8.3"
