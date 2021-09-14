@@ -1,8 +1,8 @@
-import type {ComponentFixture} from '@angular/core/testing';
-import {TestBed} from '@angular/core/testing';
-import {Router} from '@angular/router';
-import {AppBrowserModule} from './app.browser.module';
-import {AppComponent} from './app.component';
+import type { ComponentFixture } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
+import { AppBrowserModule } from './app.browser.module';
+import { AppComponent } from './app.component';
 
 describe('Test dummy', () => {
     let component: ComponentFixture<AppComponent>;

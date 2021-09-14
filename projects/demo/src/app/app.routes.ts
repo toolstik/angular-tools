@@ -1,8 +1,8 @@
-import {NgModule} from '@angular/core';
-import type {Routes} from '@angular/router';
-import {RouterModule} from '@angular/router';
-import {StaticComponent} from './modules/static/static.component';
-import {MultilangComponent} from './modules/multilang/multilang.component';
+import { NgModule } from '@angular/core';
+import type { Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { StaticComponent } from './modules/static/static.component';
+import { MultilangComponent } from './modules/multilang/multilang.component';
 
 export const appRoutes: Routes = [
     {

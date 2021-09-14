@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
-import type {Routes} from '@angular/router';
-import {RouterModule} from '@angular/router';
-import {LazyComponent} from './lazy.component';
+import { NgModule } from '@angular/core';
+import type { Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { LazyComponent } from './lazy.component';
 
 export const routes: Routes = [
     {

@@ -1,5 +1,5 @@
-import {NgModule} from '@angular/core';
-import {StaticComponent} from './static.component';
+import { NgModule } from '@angular/core';
+import { StaticComponent } from './static.component';
 
-@NgModule({declarations: [StaticComponent], exports: [StaticComponent]})
+@NgModule({ declarations: [StaticComponent], exports: [StaticComponent] })
 export class StaticModule {}

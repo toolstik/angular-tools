@@ -1,10 +1,10 @@
-import type {ModuleWithProviders} from '@angular/core';
-import {NgModule} from '@angular/core';
-import type {CurrentLangFunc} from './multilang';
-import {DefaultSupportedLangsArray} from './multilang';
-import {MultilangPipe} from './multilang.pipe';
-import {MultilangService} from './multilang.service';
-import {MULTILANG_CURRENT_LANG_TOKEN, MULTILANG_SUPPORTED_LANGS_TOKEN} from './tokens';
+import type { ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
+import type { CurrentLangFunc } from './multilang';
+import { DefaultSupportedLangsArray } from './multilang';
+import { MultilangPipe } from './multilang.pipe';
+import { MultilangService } from './multilang.service';
+import { MULTILANG_CURRENT_LANG_TOKEN, MULTILANG_SUPPORTED_LANGS_TOKEN } from './tokens';
 
 export type MultiLangModuleConfig<T extends string> = {
     supportedLangs?: T[];
