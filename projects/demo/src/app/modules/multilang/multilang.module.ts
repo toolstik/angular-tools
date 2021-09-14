@@ -1,20 +1,10 @@
 import {NgModule} from '@angular/core';
-import {MultiLangModule as LibMultiLangModule} from '@toolstik/ng-multilang';
-import {TranslateModule, TranslateService} from '@ngx-translate/core';
+import {TranslateModule} from '@ngx-translate/core';
 import {MultilangComponent} from './multilang.component';
-import {SupportedLangsArray} from './multilang';
+import {MultiLangModule as LibMultiLangModule} from '../../../../../ng-multilang/src/public-api';
 
 @NgModule({
-    imports: [
-        TranslateModule.forRoot(),
-        LibMultiLangModule.forRoot({
-            supportedLangs: [...SupportedLangsArray],
-            currentLang: {
-                inject: [TranslateService],
-                factory: (translate: TranslateService) => () => translate.currentLang,
-            },
-        }),
-    ],
+    imports: [TranslateModule.forRoot(), LibMultiLangModule],
     declarations: [MultilangComponent],
     exports: [MultilangComponent],
 })

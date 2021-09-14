@@ -1,8 +1,12 @@
 {
     "name": "@toolstik/ng-multilang",
     "version": "1.0.1",
+    "dependencies": {
+        "lodash.mergewith": "^4.6.2"
+    },
     "devDependencies": {
-        "@angular/core": "^9.0.0"
+        "@angular/core": "^9.0.0",
+        "@types/lodash.mergewith": "^4.6.6"
     },
     "peerDependencies": {
         "@angular/core": ">=9.0.0"
@@ -21,5 +25,5 @@
     },
     "repository": "https://github.com/toolstik/angular-tools",
     "bugs": "https://github.com/toolstik/angular-tools/issues",
-    "homepage": "https://github.com/toolstik/angular-tools/blob/master/projects/ng-multilang/README.md"
+    "homepage": "https://github.com/toolstik/angular-tools/tree/master/projects/ng-multilang#readme"
 }

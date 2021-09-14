@@ -1,6 +1,11 @@
-import {Inject, Injectable} from '@angular/core';
-import type {CurrentLangFunc, DefaultSupportedLangs, MultiLangString} from './multilang';
-import {MULTILANG_CURRENT_LANG_TOKEN, MULTILANG_SUPPORTED_LANGS_TOKEN} from './tokens';
+import { Inject, Injectable } from '@angular/core';
+import * as _ from 'lodash';
+import type {
+    CurrentLangFunc,
+    DefaultSupportedLangs,
+    MultiLangString,
+} from './multilang';
+import { MULTILANG_CURRENT_LANG_TOKEN, MULTILANG_SUPPORTED_LANGS_TOKEN } from './tokens';
 
 @Injectable()
 export class MultilangService<T extends string = DefaultSupportedLangs> {
@@ -78,5 +83,31 @@ export class MultilangService<T extends string = DefaultSupportedLangs> {
         }
 
         return true;
+    }
+
+    merge(
+        merger: (value: string, srcValue: string, key?: T) => string,
+        ...args: (string | MultiLangString<T>)[]
+    ): MultiLangString<T> {
+        return args
+            .map(i => {
+                if (typeof i === 'string') {
+                    const val = i;
+                    return this.supportedLangs.reduce((r, key) => {
+                        r[key] = val;
+                        return r;
+                    }, {} as MultiLangString<T>);
+                }
+
+                return i;
+            })
+            .reduce((res, cur) => _.mergeWith(res, cur, merger));
+    }
+
+    concat(...args: (string | MultiLangString<T>)[]): MultiLangString<T> {
+        return this.merge(
+            (value, srcValue) => `${value ?? ''}${srcValue ?? ''}`,
+            ...args,
+        );
     }
 }
