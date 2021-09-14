@@ -7,7 +7,7 @@
     "peerDependencies": {
         "@angular/core": ">=9.0.0"
     },
-    "description": "An Angular pacjake to work with multilingual strings",
+    "description": "An Angular package to work with multilingual strings",
     "keywords": [
         "angular",
         "ng",
@@ -15,7 +15,11 @@
         "i18n"
     ],
     "license": "Apache-2.0",
-    "repository": "",
-    "bugs": "",
-    "homepage": ""
+    "author": {
+        "name": "Viktor Tolstik",
+        "email": "tolstik.va@gmail.com"
+    },
+    "repository": "https://github.com/toolstik/angular-tools",
+    "bugs": "https://github.com/toolstik/angular-tools/issues",
+    "homepage": "https://github.com/toolstik/angular-tools/blob/master/projects/ng-multilang/README.md"
 }
