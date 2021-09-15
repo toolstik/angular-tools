@@ -1,6 +1,6 @@
-import type { OnInit } from '@angular/core';
+import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
-import type { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 import { SupportedLangsArray } from './modules/multilang/multilang';
 
 @Component({

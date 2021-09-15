@@ -1,10 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import * as _ from 'lodash';
-import type {
-    CurrentLangFunc,
-    DefaultSupportedLangs,
-    MultiLangString,
-} from './multilang';
+import { CurrentLangFunc, DefaultSupportedLangs, MultiLangString } from './multilang';
 import { MULTILANG_CURRENT_LANG_TOKEN, MULTILANG_SUPPORTED_LANGS_TOKEN } from './tokens';
 
 @Injectable()

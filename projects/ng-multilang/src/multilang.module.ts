@@ -1,6 +1,6 @@
-import type { ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { NgModule } from '@angular/core';
-import type { CurrentLangFunc } from './multilang';
+import { CurrentLangFunc } from './multilang';
 import { DefaultSupportedLangsArray } from './multilang';
 import { MultilangPipe } from './multilang.pipe';
 import { MultilangService } from './multilang.service';

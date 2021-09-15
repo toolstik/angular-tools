@@ -1,4 +1,4 @@
-import type {
+import {
     ExtractLangs,
     MultiLangString as LibMultiLangString,
 } from '@toolstik/ng-multilang';

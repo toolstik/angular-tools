@@ -8,5 +8,9 @@ module.exports = {
     },
     rules: {
         '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/consistent-type-imports': [
+            'error',
+            { prefer: 'no-type-imports' },
+        ],
     },
 };
